@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+        function computerPlay() {
+            rockPaperScissors = Math.floor(Math.random() * 3) + 1;
+            if (rockPaperScissors === 1) {
+                return "Rock";
+            }
+            if (rockPaperScissors === 2) {
+                return "Paper";
+            }
+            else{
+                return "Scissors";
+            }
+        }
+        
+        function playRound(playerSelection, computerSelection) {
+
+            if(playerSelection === "rock" && computerSelection === "Paper"){
+                return "You Lose! Paper beats Rock";
+            }
+            if(playerSelection === "paper" && computerSelection === "Scissors"){
+                return "You Lose! Scissors beats Paper";
+            }        
+            if(playerSelection === "scissors" && computerSelection === "Rock"){
+                return "You Lose! Rock beats Scissors";
+            }        
+            if(playerSelection === "rock" && computerSelection === "Scissors"){
+                return "You Win! Rock beats Scissors";
+            }
+            if(playerSelection === "paper" && computerSelection === "Rock"){
+                return "You Win! Paper beats Rock";
+            }        
+            if(playerSelection === "scissors" && computerSelection === "Paper"){
+                return "You Win! Scissors beats Paper";
+            }
+            else{
+                return "Its a Tie!";
+            }        
+        }
+
+        function game() {
+            for (let i = 1; i <= 5; i++) {
+                let playerSelection = prompt("Rock Paper or Scissors").toLowerCase();
+                console.log(playRound(playerSelection, computerPlay()));
+            }
+        }
+
+    </script>
+</body>
+</html>
