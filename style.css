@@ -1,0 +1,23 @@
+#scoreboard, #tie, #result {
+    font-size: 50px;
+}
+#player {
+    color: green;
+}
+#computer {
+    color: red;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.hidden{
+    display: none;
+}
+button {
+    width: 150px;
+    height: 75px;
+}
+#rock {
+    background-image: url(/images/rock.jpg) o-repeat;
+}
