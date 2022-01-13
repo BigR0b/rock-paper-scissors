@@ -9,12 +9,20 @@
 </head>
 <body>
     <div class="container">
+        <h1>Beat the Computer 5 Times to Win!</h1>
+        <div id="pictureBoard" class="hidden">
+            <img id="playerPic" class="faceOff flipped" src="" alt="">
+            <img id="computerPic" class="faceOff" src="" alt="">
+        </div>
         <div id="scoreboard"><span id="player">0</span> <span id="computer">0</span></div>
         <div><span id="tie">0</span></div>
         <div>
-            <button id="rock" class="rpsButton">Rock</button>
-            <button id="paper" class="rpsButton">Paper</button>
-            <button id="scissors" class="rpsButton">Scissors</button>    
+            <img id="rock" class="rpsButton flipped" src="/images/rock.jpg" alt="">
+            <!-- <div id="rock" class="rpsButton">Rock</div> -->
+            <img id="paper" class="rpsButton flipped" src="/images/paper.jpg" alt="">
+            <!-- <div id="paper" class="rpsButton">Paper</div> -->
+            <img id="scissors" class="rpsButton flipped" src="images/scissors.jpg"alt="">
+            <!-- <div id="scissors" class="rpsButton">Scissors</div>     -->
         </div>
 
         <div id="result"></div>
