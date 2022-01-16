@@ -49,6 +49,7 @@ function playerPicture(playerRPS){
         pictureBoard.appendChild(computerPic); 
     }
 }
+//Game logic
 function playRound(playerSelection, computerSelection) {
     if (playerScore < 5 && computerScore < 5) {
         if(playerSelection === "rock" && computerSelection === "paper"){
@@ -81,7 +82,6 @@ function playRound(playerSelection, computerSelection) {
         }        
     }
 }
-
 function gameOver() {
     if (playerScore === 5) {
         resetButton.classList.remove("hidden");
@@ -106,8 +106,9 @@ rpsButtons.forEach(rpsButton => {
         pictureBoard.classList.remove("hidden");
         computerPicture(comp);
         playerPicture(play);
-        if (playerScore > 4 || computerScore > 4){
+        if (playerScore === 5 || computerScore === 5){
             document.getElementById("result").innerHTML = gameOver();
+            document.getElementById("rpsButtonGroup").classList.add("disableClick");
         }
     })
 })
@@ -123,6 +124,7 @@ function reset() {
     document.getElementById("result").innerHTML = "";
     resetButton.classList.add("hidden");
     pictureBoard.classList.add("hidden");
+    document.getElementById("rpsButtonGroup").classList.remove("disableClick");
 }
 
 const resetButton = document.getElementById("reset");
